@@ -119,6 +119,7 @@ class YOLOOccupancyDetector:
             source=img_bgr,
             conf=threshold,
             classes=LAB_CLASS_IDS,
+            device='cpu',
             verbose=False
         )
 

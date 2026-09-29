@@ -6,9 +6,14 @@ import json
 import warnings
 from typing import List, Dict, Any, Optional
 
-# Suppress verbose TensorFlow, oneDNN and Keras deprecation warnings
+# Suppress verbose TensorFlow, oneDNN, OpenMP and Keras deprecation warnings
+# Force CPU mode to prevent segfaults on headless cloud containers
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["YOLO_VERBOSE"] = "False"
 warnings.filterwarnings("ignore")
 
 import cv2

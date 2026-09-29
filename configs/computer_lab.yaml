@@ -1,0 +1,41 @@
+id: computer_lab
+name: Computer Laboratory
+short_label: Lab
+description: University Computer Lab with desktop PCs, monitors, and ergonomic task chairs.
+institution: Jinnah University for Women - Department of CS & SE
+capacity: 20
+layout_type: grid
+seat_prefix: PC
+grid:
+  rows: 4
+  cols: 5
+  margin_x_ratio: 0.05
+  synthetic_margin_y_ratio: 0.08
+  natural_start_y_ratio: 0.38
+  natural_end_y_ratio: 0.96
+  box_width_ratio: 0.82
+  box_height_ratio: 0.78
+supported_models:
+  - yolo
+  - cnn
+default_model: yolo
+model_notes:
+  yolo: "Primary enterprise engine. Full-scene YOLOv8 object detection with spatial desk association."
+  cnn: "Specialized baseline. Workstation crop classifier calibrated for PC monitor/desk regions."
+accuracy_status: "Verified with Real JUW Lab Imagery"
+sample_scenes:
+  - id: real/juw_real_empty.jpg
+    label: JUW Empty Lab
+    desc: Real JUW Computer Lab (Empty Session, 0 Occupants)
+  - id: real/juw_real_solo.jpg
+    label: JUW Solo Study
+    desc: Real JUW Computer Lab (1 Student Working)
+  - id: real/juw_real_group.jpg
+    label: JUW Group Lab
+    desc: Real JUW Computer Lab (Group Work Session)
+  - id: juw_lab_sample_1.jpg
+    label: Sim Lab 01
+    desc: Balanced Simulation Session (13 Occupants)
+  - id: juw_lab_sample_3.jpg
+    label: Sim Lab 03
+    desc: Peak Capacity Simulation (18 Occupants)

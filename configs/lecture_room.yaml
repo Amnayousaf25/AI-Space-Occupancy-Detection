@@ -1,0 +1,34 @@
+id: lecture_room
+name: Lecture Room
+short_label: Lecture
+description: Academic Lecture Hall with tiered student benches, presentation podium, and dual aisles.
+institution: Jinnah University for Women - Academic Block
+capacity: 30
+layout_type: classroom_rows
+seat_prefix: LR
+grid:
+  rows: 5
+  cols: 6
+  margin_x_ratio: 0.06
+  natural_start_y_ratio: 0.35
+  natural_end_y_ratio: 0.95
+  box_width_ratio: 0.84
+  box_height_ratio: 0.72
+supported_models:
+  - yolo
+  - cnn
+default_model: yolo
+model_notes:
+  yolo: "Primary engine. Localizes seated students and correlates them to lecture desk regions via 1-to-1 spatial matching."
+  cnn: "Custom CNN baseline. Classifies individual lecture desk crops into OCCUPIED vs AVAILABLE."
+accuracy_status: "Active Architecture — Calibrated with Classroom Perspective Geometry"
+sample_scenes:
+  - id: lecture/juw_lecture_empty.jpg
+    label: Empty Lecture
+    desc: Lecture Hall (0 Students, Available for Booking)
+  - id: lecture/juw_lecture_moderate.jpg
+    label: Half Lecture
+    desc: Morning Class Session (Moderate Attendance)
+  - id: lecture/juw_lecture_full.jpg
+    label: Full Lecture
+    desc: Core Course Lecture (Full Capacity)

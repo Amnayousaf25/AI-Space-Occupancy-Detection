@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-09-14 16:00:00",
+  "total_images": 610,
+  "total_empty": 310,
+  "total_occupied": 300,
+  "class_balance": {
+    "percent_empty": 50.82,
+    "percent_occupied": 49.18
+  },
+  "splits": {
+    "controlled_train": {
+      "total": 420,
+      "empty": 210,
+      "occupied": 210,
+      "corrupted": 0
+    },
+    "controlled_val": {
+      "total": 90,
+      "empty": 45,
+      "occupied": 45,
+      "corrupted": 0
+    },
+    "controlled_test": {
+      "total": 90,
+      "empty": 45,
+      "occupied": 45,
+      "corrupted": 0
+    },
+    "real_juw_raw": {
+      "total": 10,
+      "empty": 10,
+      "occupied": 0,
+      "corrupted": 0
+    },
+    "real_juw_external_val": {
+      "total": 0,
+      "empty": 0,
+      "occupied": 0,
+      "corrupted": 0
+    }
+  },
+  "corrupted_images": [],
+  "duplicate_hashes": [
+    {
+      "hash": "35f0db4f",
+      "occurrences": 10,
+      "files": [
+        "raw\\juw_real\\empty\\JUW_IMG_0E971D2D_empty.jpg",
+        "raw\\juw_real\\empty\\JUW_IMG_38F0DF89_empty.jpg",
+        "raw\\juw_real\\empty\\JUW_IMG_600B85B6_empty.jpg",
+        "raw\\juw_real\\empty\\JUW_IMG_65E21C78_empty.jpg",
+        "raw\\juw_real\\empty\\JUW_IMG_79B551C7_empty.jpg",
+        "raw\\juw_real\\empty\\JUW_IMG_896C0E0A_empty.jpg",
+        "raw\\juw_real\\empty\\JUW_IMG_8E81625E_empty.jpg",
+        "raw\\juw_real\\empty\\JUW_IMG_A8AE9C71_empty.jpg",
+        "raw\\juw_real\\empty\\JUW_IMG_AF6C17F3_empty.jpg",
+        "raw\\juw_real\\empty\\JUW_IMG_DD321643_empty.jpg"
+      ]
+    }
+  ],
+  "leakage_analysis": {
+    "leakage_detected": false,
+    "conflict_count": 0,
+    "conflicts": []
+  }
+}

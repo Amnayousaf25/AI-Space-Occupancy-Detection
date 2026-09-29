@@ -1,0 +1,69 @@
+{
+  "active_version": "v1_controlled",
+  "models": {
+    "v1_controlled": {
+      "version": "v1_controlled",
+      "name": "CNN Baseline (Controlled)",
+      "file_path": "models\\seat_occupancy_cnn.keras",
+      "training_dataset": "Controlled University Lab Dataset",
+      "input_shape": [
+        128,
+        128,
+        3
+      ],
+      "status": "active",
+      "created_at": "2026-09-14",
+      "metrics": {
+        "dataset_type": "controlled_test",
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0
+      },
+      "notes": "Original baseline CNN trained on controlled university lab dataset."
+    },
+    "test_v1.2": {
+      "version": "test_v1.2",
+      "name": "CNN (test_v1.2)",
+      "file_path": "models/test_v1.2/model.keras",
+      "training_dataset": "Test Dataset",
+      "input_shape": [
+        128,
+        128,
+        3
+      ],
+      "status": "available",
+      "created_at": "2026-09-14",
+      "metrics": {
+        "accuracy": 0.95,
+        "precision": 0.94,
+        "recall": 0.96,
+        "f1_score": 0.95
+      },
+      "notes": "Automated test registration"
+    },
+    "v2_yolo": {
+      "version": "v2_yolo",
+      "name": "YOLOv8 Lab Object & Occupancy Detector",
+      "file_path": "models/yolov8n.pt",
+      "training_dataset": "Ultralytics YOLO Pretrained COCO (Person, Chair, Monitor, Laptop)",
+      "input_shape": [
+        640,
+        640,
+        3
+      ],
+      "status": "available",
+      "created_at": "2026-09-28",
+      "metrics": {
+        "dataset_type": "coco_and_lab_benchmark",
+        "accuracy": 0.98,
+        "precision": 0.97,
+        "recall": 0.98,
+        "f1_score": 0.975,
+        "fps": 45.0,
+        "mAP50": 0.92
+      },
+      "notes": "State-of-the-art YOLOv8 object detection model for autonomous student and seat localization."
+    }
+  }
+}
